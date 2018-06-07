@@ -1,0 +1,9 @@
+
+url : refer : https://linuxtechlab.com/openldap-complete-guide-install-configure-ldap-centos-rhel/
+Before running perl script for adding user at first time, please run following command.
+
+ldapadd -h localhost -p 389 -D "cn=manager,dc=qlc.in" -w vishnu -f qlc.ldif
+
+Check if the server is ready for accepting user entries
+
+ldapsearch -x -W -D "cn=Manager,dc=qlc.in" -b "dc=qlc.in"
